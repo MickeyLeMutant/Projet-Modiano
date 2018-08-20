@@ -1,0 +1,15 @@
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\bin\Debug\Modiano.exe.config
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\bin\Debug\Modiano.exe
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\bin\Debug\Modiano.pdb
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\Modiano.csprojAssemblyReference.cache
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\MainWindow.g.cs
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\App.g.cs
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\Modiano_MarkupCompile.cache
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\Modiano_MarkupCompile.lref
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\MainWindow.baml
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\Modiano.g.resources
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\Modiano.Properties.Resources.resources
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\Modiano.csproj.GenerateResource.cache
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\Modiano.csproj.CoreCompileInputs.cache
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\Modiano.exe
+C:\Users\Zero\Desktop\Projets\2_Informatique\1_Logiciel\4_EditeurTexte\Historique\Modiano\Modiano\obj\Debug\Modiano.pdb

@@ -1,0 +1,26 @@
+﻿<Window x:Class="Modiano.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Modiano"
+        mc:Ignorable="d"
+        Title="Projet Modiano" Height="450" Width="800" Closing="Window_Closing" >
+    <Grid AllowDrop="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="28"/>
+        </Grid.RowDefinitions>
+        <RichTextBox Name="titleRichText" FontWeight="Bold" TextBlock.TextAlignment="Center" BorderThickness="0"></RichTextBox>
+        <RichTextBox Name="mainRichText" TextChanged="mainRichText_TextChanged" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" AllowDrop="True" />
+        <Grid Grid.Row="2" VerticalAlignment="Stretch" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="boutonPlay" Click="Button_Click_1">L</Button>
+            <Slider Name="histoSlide" VerticalAlignment="Center" Visibility="Collapsed" Grid.Column="1" Margin="0,14" ></Slider>
+        </Grid>
+    </Grid>
+</Window>

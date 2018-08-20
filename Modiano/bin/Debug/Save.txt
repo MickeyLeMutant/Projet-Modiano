@@ -1,0 +1,18 @@
+
+
+** L'historique commence ici **
+A_1_a;
+D_0_1;
+A_0_;
+D_4_1;
+A_4_<br><br>;
+A_7_a;
+A_8_a;
+A_9_a;
+D_5_1;
+A_5_;
+D_11_1;
+A_11_<br><br>;
+A_14_a;
+D_2_1;
+D_4_12;
