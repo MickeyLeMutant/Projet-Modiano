@@ -1,0 +1,14 @@
+texte
+
+** L'historique commence ici **
+A_1_r;
+A_3_z;
+A_4_w;
+D_4_1;
+D_3_1;
+D_2_1;
+A_2_t;
+A_3_e;
+A_4_x;
+A_5_t;
+A_6_e;

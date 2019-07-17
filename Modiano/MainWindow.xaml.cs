@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using Modiano.Class;
 
 namespace Modiano
@@ -117,7 +120,7 @@ namespace Modiano
         }
         #endregion
 
-        private void mainRichText_TextChanged(object sender, TextChangedEventArgs e)
+        private void MainRichText_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!playing)
             {
@@ -169,7 +172,7 @@ namespace Modiano
         }
 
         #region poubelle
-        private void mainRichText_SelectionChanged(object sender, RoutedEventArgs e)
+        private void MainRichText_SelectionChanged(object sender, RoutedEventArgs e)
         {
             MouseUpdate();
         }
@@ -188,8 +191,10 @@ namespace Modiano
 #if DEBUG
                 Console.WriteLine("curseur en position : " + position);
 #endif
-                ModianoMouseMove tmp = new ModianoMouseMove();
-                tmp.Position = position;
+                ModianoMouseMove tmp = new ModianoMouseMove
+                {
+                    Position = position
+                };
                 listInteraction.Add(tmp);
             }
             else
@@ -197,9 +202,11 @@ namespace Modiano
 #if DEBUG
                 Console.WriteLine("Selection de " + start + " à " + end);
 #endif
-                ModianoMouseSelection tmp = new ModianoMouseSelection();
-                tmp.Start = start;
-                tmp.End = end;
+                ModianoMouseSelection tmp = new ModianoMouseSelection
+                {
+                    Start = start,
+                    End = end
+                };
                 listInteraction.Add(tmp);
             }
         }
@@ -227,21 +234,6 @@ namespace Modiano
         #endregion
 
         #region replay
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            playing = !playing;
-            if (playing)
-            {
-                boutonPlay.Content = "P";
-                Play();
-            }
-            else
-            {
-                boutonPlay.Content = "L";
-            }
-
-        }
-
         private void Play()
         {
             mainRichText.IsEnabled = false;
@@ -254,5 +246,39 @@ namespace Modiano
             }
         }
         #endregion
+
+        private void PlayPauseButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            playing = !playing;
+            if (playing)
+            {
+                PlayPauseButton.Source = DoGetImageSourceFromResource("Assets/Play.png");
+                Play();
+            }
+            else
+            {
+                PlayPauseButton.Source = DoGetImageSourceFromResource("Assets/Pause.png");
+            }
+        }
+
+        static internal ImageSource DoGetImageSourceFromResource(string _path)
+        {
+            Uri oUri = new Uri("pack://application:,,,/" + Assembly.GetExecutingAssembly().GetName().Name + ";component/" + _path, UriKind.RelativeOrAbsolute);
+            return BitmapFrame.Create(oUri);
+        }
+
+        private void TitleRichText_GotFocus(object sender, RoutedEventArgs e)
+        {
+            titleLbl.Visibility = Visibility.Collapsed;
+        }
+
+        private void TitleRichText_LostFocus(object sender, RoutedEventArgs e)
+        {
+            var start = titleRichText.Document.ContentStart;
+            var end = titleRichText.Document.ContentEnd;
+            int difference = start.GetOffsetToPosition(end);
+            if (difference == 0) titleLbl.Visibility = Visibility.Visible;
+
+        }
     }
 }

@@ -10,17 +10,18 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="28"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="28"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <RichTextBox Name="titleRichText" FontWeight="Bold" TextBlock.TextAlignment="Center" BorderThickness="0"></RichTextBox>
-        <RichTextBox Name="mainRichText" TextChanged="mainRichText_TextChanged" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" AllowDrop="True" />
+        <Label Name="titleLbl" HorizontalContentAlignment="Center">Title</Label>
+        <RichTextBox Name="titleRichText" FontWeight="Bold" TextBlock.TextAlignment="Center" BorderThickness="0" GotFocus="TitleRichText_GotFocus" LostFocus="TitleRichText_LostFocus" Background="Transparent"></RichTextBox>
+        <RichTextBox Name="mainRichText" TextChanged="MainRichText_TextChanged" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" AllowDrop="True" Margin="30 0"/>
         <Grid Grid.Row="2" VerticalAlignment="Stretch" Background="White">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="28"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button Name="boutonPlay" Click="Button_Click_1">L</Button>
-            <Slider Name="histoSlide" VerticalAlignment="Center" Visibility="Collapsed" Grid.Column="1" Margin="0,14" ></Slider>
+            <DockPanel HorizontalAlignment="Stretch">
+                <Image Name="StartButton" Width="30" Height="30" Source="Assets/Start.png" Margin="5"></Image>
+                <Image Name="PlayPauseButton" Width="40" Height="40" Source="Assets/Pause.png" Margin="5" MouseLeftButtonUp="PlayPauseButton_MouseLeftButtonUp"></Image>
+                <Image Name="EndButton" Width="30" Height="30" Source="Assets/End.png" Margin="5"></Image>
+                <Slider Name="histoSlide" VerticalAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" ></Slider>
+            </DockPanel>
         </Grid>
     </Grid>
 </Window>
