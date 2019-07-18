@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Modiano"
         mc:Ignorable="d"
-        Title="Projet Modiano" Height="450" Width="800" Closing="Window_Closing" >
+        Title="Modiano Project" Height="450" Width="800" Closing="Window_Closing" >
     <Grid AllowDrop="True">
         <Grid.RowDefinitions>
-            <RowDefinition Height="28"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Label Name="titleLbl" HorizontalContentAlignment="Center">Title</Label>
-        <RichTextBox Name="titleRichText" FontWeight="Bold" TextBlock.TextAlignment="Center" BorderThickness="0" GotFocus="TitleRichText_GotFocus" LostFocus="TitleRichText_LostFocus" Background="Transparent"></RichTextBox>
-        <RichTextBox Name="mainRichText" TextChanged="MainRichText_TextChanged" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" AllowDrop="True" Margin="30 0"/>
+        <RichTextBox Name="titleRichText" FontWeight="Bold" TextBlock.TextAlignment="Center" BorderThickness="0" GotFocus="TitleRichText_GotFocus" LostFocus="TitleRichText_LostFocus" Background="Transparent" Height="28"></RichTextBox>
+        <Separator HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50 29 50 0"></Separator>
+        <RichTextBox Name="mainRichText" TextChanged="MainRichText_TextChanged" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" AllowDrop="True" Margin="30 8 30 0" AcceptsTab="True"/>
         <Grid Grid.Row="2" VerticalAlignment="Stretch" Background="White">
             <DockPanel HorizontalAlignment="Stretch">
                 <Image Name="StartButton" Width="30" Height="30" Source="Assets/Start.png" Margin="5"></Image>
