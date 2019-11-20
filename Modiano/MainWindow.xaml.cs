@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows;
@@ -27,10 +26,6 @@ namespace Modiano
         public MainWindow()
         {
             InitializeComponent();
-            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-            string version = fvi.FileVersion;
-            this.Title = "Modiano Project V." + version;
             mainRichText.AddHandler(RichTextBox.DragOverEvent, new DragEventHandler(RichTextBox_DragOver), true);
             mainRichText.AddHandler(RichTextBox.DropEvent, new DragEventHandler(RichTextBox_Drop), true);
             titleRichText.AddHandler(RichTextBox.DragOverEvent, new DragEventHandler(RichTextBox_DragOver), true);
